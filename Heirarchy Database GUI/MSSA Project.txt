@@ -1,0 +1,21 @@
+Title: MSSA Project
+Author: Greg Stephens
+Date: July 7, 2019
+
+My name is Greg Stephens and my main goal is to enhance my knowledge and versatility in web development to create useful and easy to use programs. 
+To that end i have picked out three ideas on my project that would be useful in building my foundation of background elements of a program, strengthening my grasp on
+databases and interoperability between information and user.
+
+My first pick is to build an encyclopedia. a user friendly system that delivers information on animals native to the north americas. doing an encyclopedia like this 
+will be an excellent exercise in creating many tables and categories that operate together to deliver coherent information to the user. adding features like regional
+separation and genus/family/species identifiers to provide an overhead look at the different types of animals in particular
+
+my second idea would be to build a strategy game. ideally i would choose to create a game like chess. building a game with different pieces that perform different function and have
+differing limitations would be a great method of building my skills of interoperability between tables and the display. 
+
+my final idea would be to create a database GUI. along the same lines as my strategy game, this would provide an excellent opportunity to hone my skills at providing the information in
+the database to the user in a clean and easy to digest manner. I would build a database of the the majcoms of the air force that contain all the wings, groups and squadrons along with their
+missions, operability and headcount and make a user interface that provides all of this information quickly and effectively.
+
+These propositions are all great ways to strengthen my foundations, particularly concerning interoperability between database information and user interface.
+I believe that any of these idea would be a great method of furthering my skills as a future web developer. 
