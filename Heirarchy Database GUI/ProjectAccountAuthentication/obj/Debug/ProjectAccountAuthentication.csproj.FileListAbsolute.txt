@@ -1,0 +1,7 @@
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\ProjectAccountAuthentication\bin\Debug\ProjectAccountAuthentication.exe.config
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\ProjectAccountAuthentication\bin\Debug\ProjectAccountAuthentication.exe
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\ProjectAccountAuthentication\bin\Debug\ProjectAccountAuthentication.pdb
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\ProjectAccountAuthentication\obj\Debug\ProjectAccountAuthentication.csprojAssemblyReference.cache
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\ProjectAccountAuthentication\obj\Debug\ProjectAccountAuthentication.csproj.CoreCompileInputs.cache
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\ProjectAccountAuthentication\obj\Debug\ProjectAccountAuthentication.exe
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\ProjectAccountAuthentication\obj\Debug\ProjectAccountAuthentication.pdb
