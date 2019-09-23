@@ -1,6 +1,6 @@
 ## Title: Software Requirements Specification
 ## Author: Greg Stephens
-## Date: 17 Aug, 2019
+## Date: 15 September, 2019
 
 #### ID:FR1
 **Title:** User Registration
