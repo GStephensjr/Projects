@@ -1,0 +1,26 @@
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\Hierarchy GUI\bin\Debug\netcoreapp2.2\Hierarchy GUI.deps.json
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\Hierarchy GUI\bin\Debug\netcoreapp2.2\Hierarchy GUI.runtimeconfig.json
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\Hierarchy GUI\bin\Debug\netcoreapp2.2\Hierarchy GUI.runtimeconfig.dev.json
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\Hierarchy GUI\bin\Debug\netcoreapp2.2\Hierarchy GUI.dll
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\Hierarchy GUI\bin\Debug\netcoreapp2.2\Hierarchy GUI.pdb
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\Hierarchy GUI\obj\Debug\netcoreapp2.2\Hierarchy GUI.csprojAssemblyReference.cache
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\Hierarchy GUI\obj\Debug\netcoreapp2.2\Hierarchy GUI.csproj.CoreCompileInputs.cache
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\Hierarchy GUI\obj\Debug\netcoreapp2.2\Hierarchy GUI.RazorAssemblyInfo.cache
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\Hierarchy GUI\obj\Debug\netcoreapp2.2\Hierarchy GUI.RazorAssemblyInfo.cs
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\Hierarchy GUI\obj\Debug\netcoreapp2.2\Hierarchy GUI.AssemblyInfoInputs.cache
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\Hierarchy GUI\obj\Debug\netcoreapp2.2\Hierarchy GUI.AssemblyInfo.cs
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\Hierarchy GUI\obj\Debug\netcoreapp2.2\Hierarchy GUI.RazorTargetAssemblyInfo.cache
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\Hierarchy GUI\obj\Debug\netcoreapp2.2\Hierarchy GUI.dll
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\Hierarchy GUI\obj\Debug\netcoreapp2.2\Hierarchy GUI.pdb
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\Hierarchy GUI\bin\Debug\netcoreapp2.2\Hierarchy GUI.Views.dll
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\Hierarchy GUI\bin\Debug\netcoreapp2.2\Hierarchy GUI.Views.pdb
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\Hierarchy GUI\obj\Debug\netcoreapp2.2\Hierarchy GUI.TagHelpers.input.cache
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\Hierarchy GUI\obj\Debug\netcoreapp2.2\Hierarchy GUI.TagHelpers.output.cache
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\Hierarchy GUI\obj\Debug\netcoreapp2.2\Hierarchy GUI.RazorCoreGenerate.cache
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\Hierarchy GUI\obj\Debug\netcoreapp2.2\Razor\Views\Login\Index.g.cshtml.cs
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\Hierarchy GUI\obj\Debug\netcoreapp2.2\Razor\Views\_Layout.g.cshtml.cs
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\Hierarchy GUI\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\Hierarchy GUI\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\Hierarchy GUI\obj\Debug\netcoreapp2.2\Hierarchy GUI.RazorTargetAssemblyInfo.cs
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\Hierarchy GUI\obj\Debug\netcoreapp2.2\Hierarchy GUI.Views.pdb
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\Hierarchy GUI\obj\Debug\netcoreapp2.2\Hierarchy GUI.csproj.CopyComplete
