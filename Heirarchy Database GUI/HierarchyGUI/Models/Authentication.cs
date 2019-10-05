@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
-
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HierarchyGUI.Models
 {
@@ -9,7 +9,16 @@ namespace HierarchyGUI.Models
         public string UserName { get; set; }
         public string Password { get; set; }
         public bool Admin { get; set; } = false;
-        //public string hashPassword = HashDirectory.Hash(Password);
+
+        [Table("tblUser")]
+        public class tblUser
+        {
+            [Key]
+            [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
+            public int UserID { get; set; }
+            public string UserName { get; set; }
+            public string Password { get; set; }
+        }
 
 
     }

@@ -1,26 +1,29 @@
 ﻿@model Authentication
 
-<form asp-action="Register" method="post" class="m-4">
-    <div class="container">
-        <h1 class="text-center m-4">Register</h1>
-        <p>Please fill out this form to create an account.</p>
-        <hr class="form-group">
+    <form asp-action="Register" method="post" class="m-4">
+        <div class="container">
+            <h1 class="text-center m-4">Register</h1>
+            <p>Please fill out this form to create an account.</p>
+            <hr class="form-group">
 
-        <label for="UserName"><b>UserName</b></label>
-        <input type="text" placeholder="Enter UserName" asp-for="UserName" class="form-control" required>
+            <label for="UserName"><b>UserName</b></label>
+            <input type="text" placeholder="Enter UserName" asp-for="UserName" class="form-control" required>
 
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" asp-for="Password" class="form-control" required>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" asp-for="Password" class="form-control" required>
 
-        <label for="psw-repeat"><b>Repeat Password</b></label>
-        <input type="password" placeholder="Repeat Password" name="Password-repeat" class="form-control" required>
+            <label for="psw-repeat"><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="Password-repeat" class="form-control" required>
+            <hr>
+
+            <button type="submit" class="btn btn-primary">Register</button>
+        </div>
         <hr>
 
-        <button type="submit" class="btn btn-primary">Register</button>
-    </div>
+        <div class="container signin">
+            <p>Already have an account?</p> <a class="btn btn-secondary" href="Login">Sign In</a>
+        </div>
+        <hr>
 
-    <div class="container signin">
-        <p>Already have an account?</p> <a class="btn btn-secondary" href="Login">Sign In</a>
-    </div>
-</form>
+    </form>
 

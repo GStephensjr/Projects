@@ -1,0 +1,83 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Grego\\OneDrive\\Desktop\\MSSA\\ClassroomManager-master\\ClassroomManagerRazor-Sqlite\\ClassManagerRazor\\ClassManagerRazor\\ClassManagerRazor.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Grego\\OneDrive\\Desktop\\MSSA\\ClassroomManager-master\\ClassroomManagerRazor-Sqlite\\ClassManagerRazor\\ClassManagerRazor\\ClassManagerRazor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Grego\\OneDrive\\Desktop\\MSSA\\ClassroomManager-master\\ClassroomManagerRazor-Sqlite\\ClassManagerRazor\\ClassManagerRazor\\ClassManagerRazor.csproj",
+        "projectName": "ClassManagerRazor",
+        "projectPath": "C:\\Users\\Grego\\OneDrive\\Desktop\\MSSA\\ClassroomManager-master\\ClassroomManagerRazor-Sqlite\\ClassManagerRazor\\ClassManagerRazor\\ClassManagerRazor.csproj",
+        "packagesPath": "C:\\Users\\Grego\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Grego\\OneDrive\\Desktop\\MSSA\\ClassroomManager-master\\ClassroomManagerRazor-Sqlite\\ClassManagerRazor\\ClassManagerRazor\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Grego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[2.2.1, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.2.3, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

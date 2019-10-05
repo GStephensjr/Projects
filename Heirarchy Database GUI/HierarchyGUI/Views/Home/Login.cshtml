@@ -1,1 +1,25 @@
-﻿
+﻿@model Authentication
+
+    <form asp-action="Login" method="post" class="m-4">
+        <div class="container">
+            <h1 class="text-center m-4">Login</h1>
+            <p>Please enter your login information</p>
+            <hr class="form-group">
+
+            <label for="UserName"><b>UserName</b></label>
+            <input type="text" placeholder="Enter UserName" asp-for="UserName" class="form-control" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" asp-for="Password" class="form-control" required>
+            <hr>
+
+            <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+        <hr>
+
+        <div class="container signin">
+            <p>Don't have an account?</p> <a class="btn btn-secondary" href="Register">Register</a>
+        </div>
+        <hr>
+
+    </form>

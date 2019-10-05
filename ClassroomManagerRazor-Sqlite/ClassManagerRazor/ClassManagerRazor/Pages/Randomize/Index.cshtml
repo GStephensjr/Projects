@@ -1,0 +1,39 @@
+﻿@page
+@model ClassManagerRazor.Pages.Randomize.IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<br />
+<div class="container row">
+    <div class="col-6">
+        <h2 class="text-info">Current Students</h2>
+    </div>
+    <div class="col-6 text-right">
+        <a asp-page="Add" class="btn btn-primary">Add Student</a>
+    </div>
+</div>
+
+<form method="post">
+    @if (Model.Students.Count() > 0)
+    {
+        <br /><br />
+        <table class="table table-striped border">
+            <tr class="table-secondary">
+                <th>@Html.DisplayNameFor(c => c.Students.FirstOrDefault().fName)</th>
+                <th>@Html.DisplayNameFor(c => c.Students.FirstOrDefault().lName)</th>
+            </tr>
+            @foreach (var item in Model.Students)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(c => item.fName)</td>
+                    <td>@Html.DisplayFor(c => item.lName)</td>
+                </tr>
+            }
+        </table>
+    }
+    else
+    {
+        <p></p>
+    }
+</form>
