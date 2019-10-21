@@ -3,23 +3,47 @@
 <h3 class="bg-primary p-2 text-white text-center">
     Users
 </h3>
-<div class="container-fluid">
+@*<div class="container-fluid">
     <div class="row p-1">
         <div class="col font-weight-bold">User Name</div>
         <div class="col font-weight-bold">Account Status</div>
     </div>
     @foreach (Credential r in Model)
     {
-<div class="row p-1">
-    <div class="col">@r.UserName</div>
-    <div class="col">@(r.Admin == true ? "Admin" : "Basic")</div>
-    @if (SessionCredentials.Status == true)
-    {
-        <a class="btn btn-success btn-sm" asp-route-id="@r" asp-action="ModifyUser">Modify</a>
+        <div class="row p-1">
+            <div class="col">@r.UserName</div>
+            <div class="col">@(r.Admin == true ? "Admin" : "Basic")</div>
+            @if (SessionCredentials.Status == true)
+            {
+                <a class="btn btn-success btn-sm" asp-route-id="@r.UserName" asp-action="ModifyUser">Modify</a>
+            }
+        </div>
     }
-</div>
-    }
-</div>
+</div>*@
+<table class="table table-striped table-hover " border="1">
+    <thead>
+        <tr>
+            <th>User Name</th>
+            <th>Account Status</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+            @foreach( Credential r in Model) { 
+                <tr>
+                <td>@r.UserName</td>
+                
+                <td>@(r.Admin == true ? "Admin" : "Basic")</td>
+                <td>@if (SessionCredentials.Status == true)
+                {
+                    <a class="btn btn-success btn-sm" asp-route-id="@r.UserName" asp-action="ModifyUser">Modify</a>
+                }
+                </td>
+                </tr>
+                }
+        </tr>
+    </tbody>
+</table>
 <a class="btn btn-secondary" href="Index">click here to return home</a>
 
 @*<table rules='all' style='border: 2px purple groove'>

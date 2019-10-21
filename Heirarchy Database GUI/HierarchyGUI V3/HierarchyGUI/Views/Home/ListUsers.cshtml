@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Credential>
+
+<h3 class="bg-primary p-2 text-white text-center">
+    Users
+</h3>
+@*<div class="container-fluid">
+    <div class="row p-1">
+        <div class="col font-weight-bold">User Name</div>
+        <div class="col font-weight-bold">Account Status</div>
+    </div>
+    @foreach (Credential r in Model)
+    {
+        <div class="row p-1">
+            <div class="col">@r.UserName</div>
+            <div class="col">@(r.Admin == true ? "Admin" : "Basic")</div>
+            @if (SessionCredentials.Status == true)
+            {
+                <a class="btn btn-success btn-sm" asp-route-id="@r.UserName" asp-action="ModifyUser">Modify</a>
+            }
+        </div>
+    }
+</div>*@
+<table class="table table table-hover " border="1">
+    <thead>
+        <tr class="table-dark">
+            <th>User Name</th>
+            <th>Account Status</th>
+            @if (SessionCredentials.Status == true)
+            {<th></th>}
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Credential r in Model)
+        {
+            <tr class="table-dark">
+                <td>@r.UserName</td>
+
+                <td>@(r.Admin == true ? "Admin" : "Basic")</td>
+                <td>
+                    @if (SessionCredentials.Status == true)
+                    {
+                        <a class="btn btn-warning btn-sm" asp-route-UserName="@r.UserName" asp-action="ModifyUser">Modify</a>
+                    }
+            </td>
+        </tr>
+    }
+        </tr>
+    </tbody>
+</table>
+<a class="btn btn-secondary" href="Index">click here to return home</a>
+
+@*<table rules='all' style='border: 2px purple groove'>
+        <tr>
+            <th>User Name</th>
+            <th>Account Status</th>
+        </tr>
+        <tbody>
+            @foreach (Authentication r in Model)
+            {
+                <tr>
+                    <td>@r.UserName</td>
+                    <td>@(r.Admin == true ? "Admin" : "Basic")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <p><a asp-action="Index">Click here to return home</a>.</p>*@
+

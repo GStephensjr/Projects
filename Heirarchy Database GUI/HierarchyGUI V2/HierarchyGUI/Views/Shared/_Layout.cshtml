@@ -2,11 +2,16 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
+
     <title>Hierarchy</title>
     <link rel="stylesheet"
-          asp-href-include="/lib/bootstrap/dist/**/*.min.css"
-          asp-href-exclude="**/*-reboot*,**/*-grid*" 
-          href="\lib\bootstrap\dist\css\bootstrap.css" />
+          @*asp-href-include="/lib/bootstrap/dist/**/*.min.css"*@
+          asp-href-include="/lib/bootstrap/dist/Slate Bootstrap/theme.min.css"
+          asp-href-exclude="**/*-reboot*,**/*-grid*"
+          @*href="\lib\bootstrap\dist\css\bootstrap.css"*@
+          href="~/lib/bootstrap/Slate Bootstrap/theme.css"
+          />
 </head>
 <body >
     @RenderBody()

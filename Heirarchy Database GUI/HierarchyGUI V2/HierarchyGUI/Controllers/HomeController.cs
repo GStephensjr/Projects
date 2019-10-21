@@ -1,8 +1,7 @@
 ﻿using HierarchyGUI.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
-
-
+using System.Threading.Tasks;
 
 namespace HierarchyGUI.Controllers
 {
@@ -12,9 +11,11 @@ namespace HierarchyGUI.Controllers
         public HomeController(ApplicationDbContext ctx) => context = ctx;
         public IActionResult Index() => View();
         public IActionResult Register() => View();
+        public IActionResult test() => View();
+
         public IActionResult Login() => View();
-        public IActionResult ModifyUser() => View();
-        public IActionResult Modify() => View();
+        public IActionResult ModifyUser(string UserName) => View(context.Credentials
+            .FirstOrDefault(p => p.UserName == UserName));
 
 
         public IActionResult Congratulations() => View();
@@ -67,13 +68,30 @@ namespace HierarchyGUI.Controllers
         }
 
 
+        [BindProperty]
+        public Credential User { get; set; }
+
+        public async Task OnGet(string UserName) { User = await context.Credentials.FindAsync(User.UserName); }
+
         [HttpPost]
-        public ActionResult Modify(Credential User, bool change)
+        public async Task<ActionResult> ModifyUser(Credential User)
         {
-            User.Admin = change;
-            context.Credentials.Update(User);
-            context.SaveChanges();
-            return RedirectToAction(nameof(ListUsers));
+            if (ModelState.IsValid)
+            {
+                var dbUser = new Credential(); 
+                    dbUser = await context.Credentials.FindAsync(User.UserName);
+                dbUser.UserName = User.UserName;
+                dbUser.Admin = User.Admin;
+                await context.SaveChangesAsync();
+                TempData["message"] = $"{User.UserName} has been saved";
+                return RedirectToAction(nameof(ListUsers));
+            }
+            else
+            {
+                // there is something wrong with the data values
+                return View(User);
+            }
+
         }
 
     }
