@@ -1,0 +1,30 @@
+﻿@model IEnumerable<HeadquartersAF>
+
+<style>
+    .card-columns {
+        
+  width: 49.89%;
+  height: 0 auto; 
+}
+</style>
+@foreach (HeadquartersAF h in Model)
+{<div class="card mb-md-0 d-lg-inline-flex card-columns">
+    <h3 class="card-header">@h.StaffName</h3>
+    <div class="card-body">
+        <h5 class="card-title">@h.Commander</h5>
+        <h6 class="card-subtitle text-muted">@h.CommanderTitle</h6>
+    </div>
+    <img style="height: inherit; width: inherit; display: block;" src="~/lib/Images/@h.StaffName Commander.jpg">
+    <div class="card-body">
+        <p class="card-text">@h.Location</p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">@h.Mission</li>
+    </ul>
+    @if (SessionCredentials.Status == true)
+    {
+        <a type="button" class="btn btn-warning btn-sm" asp-route-StaffName="@h.StaffName" asp-action="ModifyHeadquarters">Modify</a>
+        <a type="button" onclick="return confirm('Are you sure you want to delete this item?');" class="btn btn-danger btn-sm" asp-route-Name="@h.StaffName" asp-action="DeleteWing">Delete</a>
+    }
+
+</div>  }

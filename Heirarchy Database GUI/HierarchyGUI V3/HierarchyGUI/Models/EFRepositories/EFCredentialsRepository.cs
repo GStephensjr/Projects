@@ -14,6 +14,13 @@ namespace HierarchyGUI.Models.EFRepositories
             context = ctx;
         }
         public IQueryable<Credential> Credentials => context.Credentials;
+        
+        public void deleteUser(Credential User)
+        {
+            Credential dbEntry = context.Credentials.FirstOrDefault(p => p == User);
+            context.Credentials.Remove(dbEntry);
+            context.SaveChanges();
+        }
 
         public void saveUser(Credential User)
         {
@@ -23,6 +30,7 @@ namespace HierarchyGUI.Models.EFRepositories
                 .FirstOrDefault(p => p.UserName == User.UserName);
                 if (dbEntry != null)
                 {
+
                     dbEntry.UserName = User.UserName;
                     dbEntry.Password = User.Password;
                     dbEntry.Admin = User.Admin;

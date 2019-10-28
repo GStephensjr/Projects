@@ -12,13 +12,133 @@ namespace HierarchyGUI.Controllers
     public class HomeController: Controller
     {
         private ICredentialsRepository repository;
-        public HomeController(ICredentialsRepository repo)
+        private IRepository context;
+        public HomeController(ICredentialsRepository repo, IRepository ctx)
         {
             repository = repo;
+            context = ctx;
         }
         public IActionResult Congratulations() => View();
-        public IActionResult Register() => View();
 
+        public IActionResult Home()=> View();
+
+        //Database Entry Views
+        public IActionResult Register() => View();
+        public IActionResult Add() => View();
+        public IActionResult HeadquartersAFCreate() => View();
+        public IActionResult MajcomCreate() => View();
+        public IActionResult NumberedAFCreate() => View();
+        public IActionResult WingCreate() => View();
+        public IActionResult GroupCreate() => View();
+        public IActionResult SquadronCreate() => View();
+        public IActionResult CongratulationsEntry() => View();
+
+
+        //Listing Views
+        public IActionResult HeadquartersAF() => View(context.HeadquartersAF.Select(r=>r));
+        public IActionResult MajcomListing() => View(context.Majcoms.Select(r => r));
+        public IActionResult GroupListing() => View(context.Groups.Select(r => r));
+        public IActionResult WingListing() => View(context.Wings.Select(r => r));
+        public IActionResult SquadronListing() => View(context.Squadrons.Select(r => r));
+        public IActionResult NumberedAFListing() => View(context.NumberedAFs.Select(r => r));
+
+        //entry creations
+        [HttpPost]
+        public IActionResult HeadquartersAFCreate(HeadquartersAF entry)
+        {
+            context.saveEntry(entry);
+            return RedirectToAction(nameof(CongratulationsEntry));
+        }
+        [HttpPost]
+        public IActionResult MajcomCreate(Majcom entry)
+        {
+            context.saveEntry(entry);
+            return RedirectToAction(nameof(CongratulationsEntry));
+        }
+        [HttpPost]
+        public IActionResult NumberedAFCreate(NumberedAF entry)
+        {
+            context.saveEntry(entry);
+            return RedirectToAction(nameof(CongratulationsEntry));
+        }
+        [HttpPost]
+        public IActionResult WingCreate(Wing entry)
+        {
+            context.saveEntry(entry);
+            return RedirectToAction(nameof(CongratulationsEntry));
+        }
+        [HttpPost]
+        public IActionResult GroupCreate(Group entry)
+        {
+            context.saveEntry(entry);
+            return RedirectToAction(nameof(CongratulationsEntry));
+        }
+        [HttpPost]
+        public IActionResult SquadronCreate(Squadron entry)
+        {
+            context.saveEntry(entry);
+            return RedirectToAction(nameof(CongratulationsEntry));
+        }
+
+
+
+
+
+
+        public IActionResult DeleteHeadquarters(string Name)
+        {
+            HeadquartersAF dbentry = context.HeadquartersAF.FirstOrDefault(p => p.StaffName == Name);
+            context.deleteEntry(dbentry);
+            
+            return (RedirectToAction(nameof(Home)));
+        }
+        public IActionResult DeleteMajcom(string Name)
+        {
+            Majcom dbentry = context.Majcoms.FirstOrDefault(p => p.Name == Name);
+            context.deleteEntry(dbentry);
+
+            return (RedirectToAction(nameof(Home)));
+        }
+        public IActionResult DeleteNumberedAF(string Name)
+        {
+            NumberedAF dbentry = context.NumberedAFs.FirstOrDefault(p => p.Name == Name);
+            context.deleteEntry(dbentry);
+
+            return (RedirectToAction(nameof(Home)));
+        }
+        public IActionResult DeleteWings(string Name)
+        {
+            Wing dbentry = context.Wings.FirstOrDefault(p => p.Name == Name);
+            context.deleteEntry(dbentry);
+
+            return (RedirectToAction(nameof(Home)));
+        }
+        public IActionResult DeleteGroup(string Name)
+        {
+            Group dbentry = context.Groups.FirstOrDefault(p => p.Name == Name);
+            context.deleteEntry(dbentry);
+
+            return (RedirectToAction(nameof(Home)));
+        }
+        public IActionResult DeleteSquadron(string Name)
+        {
+            Squadron dbentry = context.Squadrons.FirstOrDefault(p => p.Name == Name);
+            context.deleteEntry(dbentry);
+
+            return (RedirectToAction(nameof(Home)));
+        }
+
+
+
+
+
+        public IActionResult DeleteUser(string UserName)
+        {
+            Credential User = repository.Credentials
+                .FirstOrDefault(p => p.UserName == UserName);
+            repository.deleteUser(User);
+            return (RedirectToAction(nameof(ListUsers)));
+        }
         [HttpPost]
         public IActionResult Register(Credential response)
         {
@@ -60,6 +180,30 @@ namespace HierarchyGUI.Controllers
             return View(login);
         }
 
+        public IActionResult Logout()
+        {
+            SessionCredentials.Status = false;
+            SessionCredentials.User = null;
+            return RedirectToAction(nameof(Index));
+        }
+
+
+        public IActionResult Index() => View();
+        public IActionResult test() => View();
+
+        public IActionResult Login() => View();
+
+        //modification views
+        public IActionResult ModifyUser(string UserName) => View(repository.Credentials
+            .FirstOrDefault(p => p.UserName == UserName));
+        public IActionResult ModifyHeadquarters(string Name)=>View(context.HeadquartersAF.FirstOrDefault(p=>p.StaffName == Name));
+        public IActionResult ModifyMajcom(string Name) => View(context.Majcoms.FirstOrDefault(p => p.Name == Name));
+        public IActionResult ModifyNumberedAF(string Name) => View(context.NumberedAFs.FirstOrDefault(p => p.Name == Name));
+        public IActionResult ModifyWing(string Name) => View(context.Wings.FirstOrDefault(p => p.Name == Name));
+        public IActionResult ModifyGroup(string Name) => View(context.Groups.FirstOrDefault(p => p.Name == Name));
+        public IActionResult ModifySquadron(string Name) => View(context.Squadrons.FirstOrDefault(p => p.Name == Name));
+
+        //modification actions
         [HttpPost]
         public IActionResult ModifyUser(Credential User)
         {
@@ -76,13 +220,107 @@ namespace HierarchyGUI.Controllers
             }
 
         }
-        public IActionResult Index() => View();
-        public IActionResult test() => View();
+        [HttpPost]
+        public IActionResult ModifyHeadquarters(HeadquartersAF entry)
+        {
+            if (ModelState.IsValid)
+            {
+                context.saveEntry(entry);
+                return RedirectToAction(nameof(CongratulationsEntry));
+            }
+            else
+            {
+                // there is something wrong with the data values
+                return View(entry);
+            }
 
-        public IActionResult Login() => View();
-        public IActionResult ModifyUser(string UserName) => View(repository.Credentials
-            .FirstOrDefault(p => p.UserName == UserName));
+        }
+        [HttpPost]
+        public IActionResult ModifyMajcom(Majcom entry)
+        {
+            if (ModelState.IsValid)
+            {
+                context.saveEntry(entry);
+                return RedirectToAction(nameof(CongratulationsEntry));
+            }
+            else
+            {
+                // there is something wrong with the data values
+                return View(entry);
+            }
 
+        }
+        [HttpPost]
+        public IActionResult ModifyNumberedAF(NumberedAF entry)
+        {
+            if (ModelState.IsValid)
+            {
+                context.saveEntry(entry);
+                return RedirectToAction(nameof(CongratulationsEntry));
+            }
+            else
+            {
+                // there is something wrong with the data values
+                return View(entry);
+            }
+
+        }
+        [HttpPost]
+        public IActionResult ModifyWing(Wing entry)
+        {
+            if (ModelState.IsValid)
+            {
+                context.saveEntry(entry);
+                return RedirectToAction(nameof(CongratulationsEntry));
+            }
+            else
+            {
+                // there is something wrong with the data values
+                return View(entry);
+            }
+
+        }
+        [HttpPost]
+        public IActionResult ModifyGroup(Group entry)
+        {
+            if (ModelState.IsValid)
+            {
+                context.saveEntry(entry);
+                return RedirectToAction(nameof(CongratulationsEntry));
+            }
+            else
+            {
+                // there is something wrong with the data values
+                return View(entry);
+            }
+
+        }
+        [HttpPost]
+        public IActionResult ModifySquadron(Squadron entry)
+        {
+            if (ModelState.IsValid)
+            {
+                context.saveEntry(entry);
+                return RedirectToAction(nameof(CongratulationsEntry));
+            }
+            else
+            {
+                // there is something wrong with the data values
+                return View(entry);
+            }
+
+        }
+
+
+
+
+
+        //entry views
+        public IActionResult NumberedAFEntry(string Name) => View(context.NumberedAFs.FirstOrDefault(p => p.Name == Name));
+        public IActionResult MajcomEntry(string Name) => View(context.Majcoms.FirstOrDefault(p => p.Name == Name));
+        public IActionResult GroupEntry(string Name) => View(context.Groups.FirstOrDefault(p => p.Name == Name));
+        public IActionResult WingEntry(string Name) => View(context.Wings.FirstOrDefault(p => p.Name == Name));
+        public IActionResult SquadronEntry(string Name) => View(context.Squadrons.FirstOrDefault(p => p.Name == Name));
 
 
 

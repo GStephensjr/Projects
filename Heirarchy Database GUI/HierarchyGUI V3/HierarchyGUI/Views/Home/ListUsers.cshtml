@@ -1,25 +1,8 @@
 ﻿@model IEnumerable<Credential>
 
-<h3 class="bg-primary p-2 text-white text-center">
+<h3 class="bg-secondary p-2 text-white text-center">
     Users
 </h3>
-@*<div class="container-fluid">
-    <div class="row p-1">
-        <div class="col font-weight-bold">User Name</div>
-        <div class="col font-weight-bold">Account Status</div>
-    </div>
-    @foreach (Credential r in Model)
-    {
-        <div class="row p-1">
-            <div class="col">@r.UserName</div>
-            <div class="col">@(r.Admin == true ? "Admin" : "Basic")</div>
-            @if (SessionCredentials.Status == true)
-            {
-                <a class="btn btn-success btn-sm" asp-route-id="@r.UserName" asp-action="ModifyUser">Modify</a>
-            }
-        </div>
-    }
-</div>*@
 <table class="table table table-hover " border="1">
     <thead>
         <tr class="table-dark">
@@ -39,30 +22,13 @@
                 <td>
                     @if (SessionCredentials.Status == true)
                     {
-                        <a class="btn btn-warning btn-sm" asp-route-UserName="@r.UserName" asp-action="ModifyUser">Modify</a>
+                        <a type="button" class="btn btn-warning btn-sm" asp-route-UserName="@r.UserName" asp-action="ModifyUser">Modify</a>
+                        <a type="button" onclick="return confirm('Are you sure you want to delete this item?');" class="btn btn-danger btn-sm"asp-route-UserName="@r.UserName" asp-action="DeleteUser">Delete</a>
                     }
-            </td>
+                </td>
         </tr>
     }
-        </tr>
     </tbody>
 </table>
-<a class="btn btn-secondary" href="Index">click here to return home</a>
-
-@*<table rules='all' style='border: 2px purple groove'>
-        <tr>
-            <th>User Name</th>
-            <th>Account Status</th>
-        </tr>
-        <tbody>
-            @foreach (Authentication r in Model)
-            {
-                <tr>
-                    <td>@r.UserName</td>
-                    <td>@(r.Admin == true ? "Admin" : "Basic")</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-    <p><a asp-action="Index">Click here to return home</a>.</p>*@
+<a class="btn btn-secondary" href="Home">click here to return home</a>
 

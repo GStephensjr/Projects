@@ -1,39 +1,45 @@
 ﻿@model Credential
+<head runat="server">
+    <title>Meta Tags</title>
+    @if (SessionCredentials.Status != true)
+    {
+        <meta http-equiv="Refresh" content="0; url=Login" />
+    }
+</head>
 
-    <form asp-action="ModifyUser" method="post">
-        <input type="hidden" asp-for="UserName" />
-        <div class="form-group">
-            <label asp-for="UserName"></label>
-            <div><span asp-validation-for="UserName" class="text-danger"></span></div>
-            <input asp-for="UserName" class="form-control" />
-        </div>
-        <div class="form-group">
-            <label class="col-lg-2 control-label" asp-for="Admin">Account Status</label>
-            <div class="col-lg-10">
-                <div>
-                    <span asp-validation-for="Admin" class="text-danger"></span>
-                </div>
-                <div class="radio">
-                    <label>
-                        <input type="radio" name="Admin" id="true" value="true" checked="">
-                        Admin
-                    </label>
-                </div>
-                <div class="radio">
-                    <label>
-                        <input type="radio" name="Admin" id="false" value="false">
-                        Basic
-                    </label>
-                </div>
+<form asp-action="ModifyUser" method="post">
+    <div class="form-group">
+        <label asp-for="UserName"></label>
+        <div><span asp-validation-for="UserName" class="text-danger"></span></div>
+        <input asp-for="UserName" class="form-control" />
+    </div>
+    <div class="form-group" >
+        <label class="col-lg-2 control-label" asp-for="Admin">Account Status</label>
+        <div class="col-lg-10">
+            <div>
+                <span asp-validation-for="Admin" class="text-danger"></span>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="Admin" id="true" value="true" checked="">
+                    Admin
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="Admin" id="false" value="false">
+                    Basic
+                </label>
             </div>
         </div>
-        <div class="form-group">
-            <div class="col-lg-10 col-lg-offset-2">
-                <button type="reset" class="btn btn-default">Reset</button>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
+    </div>
+    <div class="form-group">
+        <div class="col-lg-10 col-lg-offset-2">
+            <button type="reset" class="btn btn-default">Reset</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
         </div>
-    </form>
+    </div>
+</form>
 <div class="container ListUsers">
     <p><a asp-action="ListUsers">Click here to return to the List of Users</a>.</p>
 </div>

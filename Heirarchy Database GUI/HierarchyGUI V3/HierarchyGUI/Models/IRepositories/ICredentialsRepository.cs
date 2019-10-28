@@ -11,6 +11,7 @@ namespace HierarchyGUI.Models.IRepositories
     {
         IQueryable<Credential> Credentials { get; }
         void saveUser(Credential User);
+        void deleteUser(Credential User);
 
     }
 }

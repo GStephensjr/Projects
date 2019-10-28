@@ -1,0 +1,64 @@
+﻿@model Group
+<head runat="server">
+    <title>Meta Tags</title>
+    @if (SessionCredentials.Status != true)
+    {
+        <meta http-equiv="Refresh" content="0; url=Login" />
+    }
+</head>
+
+<form asp-action="ModifyGroup" method="post">
+    <input type="hidden" asp-for="Name" />
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <div><span asp-validation-for="Name" class="text-danger"></span></div>
+        <input asp-for="Name" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Commander"></label>
+        <div><span asp-validation-for="Commander" class="text-danger"></span></div>
+        <input asp-for="Commander" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Location"></label>
+        <div><span asp-validation-for="Location" class="text-danger"></span></div>
+        <input asp-for="Location" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Motto"></label>
+        <div><span asp-validation-for="Motto" class="text-danger"></span></div>
+        <input asp-for="Motto" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Mission"></label>
+        <div><span asp-validation-for="Mission" class="text-danger"></span></div>
+        <input asp-for="Mission" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Size"></label>
+        <div><span asp-validation-for="Size" class="text-danger"></span></div>
+        <input asp-for="Size" class="form-control" />
+    </div>
+    @*<div class="form-group">
+        <label asp-for="Image"></label>
+        <div><span asp-validation-for="Image" class="text-danger"></span></div>
+        <input asp-for="Image" class="form-control" />
+    </div>*@
+
+
+    <div class="form-group">
+        <div class="col-lg-10 col-lg-offset-2">
+            <button type="reset" class="btn btn-default">Reset</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</form>
+<br />
+<div class="container Home">
+    <p><a asp-action="Home">Click here to return home</a>.</p>
+</div>

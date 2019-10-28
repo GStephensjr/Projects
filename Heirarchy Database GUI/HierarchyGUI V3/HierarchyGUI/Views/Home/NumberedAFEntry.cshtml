@@ -1,0 +1,20 @@
+﻿<div class="card mb-md-0 d-lg-inline-flex card-columns">
+    <h3 class="card-header"> @Model.Name </h3>
+    <div class="card-body">
+        <h5 class="card-title"> @Model.Location </h5>
+        <h6 class="card-subtitle text-muted"> @Model.Motto </h6>
+    </div>
+    <img style="height: 200px; width: 200px; display: block;" src="~/lib/Images/Insignias/Numbered AF Insignias/@Model.Name Insignia.png">
+    <div class="card-body">
+        <p class="card-text"> @Model.Mission </p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"> @Model.Majcom </li>
+        <li class="list-group-item">@Model.Size Personnel</li>
+    </ul>
+    @if (SessionCredentials.Status == true)
+    {
+        <a type="button" class="btn btn-warning btn-sm" asp-route-Name="@Model.Name" asp-action="ModifyNumberedAF">Modify</a>
+        <a type="button" onclick="return confirm('Are you sure you want to delete this item?');" class="btn btn-danger btn-sm" asp-route-Name="@Model.Name" asp-action="DeleteNumberedAF">Delete</a>
+    }
+</div>
