@@ -206,3 +206,4 @@ C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\HierarchyGU
 C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\HierarchyGUI V3\HierarchyGUI\obj\Debug\netcoreapp3.0\Razor\Views\Home\WingCreate.cshtml.g.cs
 C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\HierarchyGUI V3\HierarchyGUI\obj\Debug\netcoreapp3.0\Razor\Views\Home\WingEntry.cshtml.g.cs
 C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\HierarchyGUI V3\HierarchyGUI\obj\Debug\netcoreapp3.0\Razor\Views\Home\WingListing.cshtml.g.cs
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Heirarchy Database GUI\HierarchyGUI V3\HierarchyGUI\obj\Debug\netcoreapp3.0\Razor\Views\Home\Search.cshtml.g.cs

@@ -1,0 +1,42 @@
+﻿@model Dictionary<string, string>
+
+    <div>
+        @foreach (KeyValuePair<string,string> m in Model)
+        {
+            @if (m.Key == "Majcom")
+            {
+                <div class="card text-white bg-secondary mb-3 d-inline-flex" style="max-width: 20rem;">
+                    <a asp-route-Name="@m.Value" asp-action="MajcomEntry" class="card-header" font="bold">@m.Value</a>
+                </div>
+            }
+            @if (m.Key == "NumberedAF")
+            {
+    <div class="card text-white bg-secondary mb-3 d-inline-flex" style="max-width: 20rem;">
+        <a asp-route-Name="@m.Value" asp-action="NumberedAFEntry" class="card-header" font="bold">@m.Value</a>
+    </div>
+
+            }
+            @if (m.Key == "Wing")
+            {
+    <div class="card text-white bg-secondary mb-3 d-inline-flex" style="max-width: 20rem;">
+        <a asp-route-Name="@m.Value" asp-action="WingEntry" class="card-header" font="bold">@m.Value</a>
+    </div>
+
+            }
+            @if (m.Key == "Group")
+            {
+    <div class="card text-white bg-secondary mb-3 d-inline-flex" style="max-width: 20rem;">
+        <a asp-route-Name="@m.Value" asp-action="GroupEntry" class="card-header" font="bold">@m.Value</a>
+    </div>
+
+            }
+            @if (m.Key == "Squadron")
+            {
+    <div class="card text-white bg-secondary mb-3 d-inline-flex" style="max-width: 20rem;">
+        <a asp-route-Name="@m.Value" asp-action="SquadronEntry" class="card-header" font="bold">@m.Value</a>
+    </div>
+
+            }
+
+        }
+    </div>

@@ -1,0 +1,52 @@
+﻿@model HeadquartersAF
+<head runat="server">
+    <title>Meta Tags</title>
+    @if (SessionCredentials.Status != true)
+    {
+        <meta http-equiv="Refresh" content="0; url=Login" />
+    }
+</head>
+
+<form asp-action="ModifyHeadquarters" method="post">
+    <div class="form-group">
+        <label asp-for="StaffName"></label>
+        <div><span asp-validation-for="StaffName" class="text-danger"></span></div>
+        <input asp-for="StaffName" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Commander"></label>
+        <div><span asp-validation-for="Commander" class="text-danger"></span></div>
+        <input asp-for="Commander" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CommanderTitle"></label>
+        <div><span asp-validation-for="CommanderTitle" class="text-danger"></span></div>
+        <input asp-for="CommanderTitle" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Location"></label>
+        <div><span asp-validation-for="Location" class="text-danger"></span></div>
+        <input asp-for="Location" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Mission"></label>
+        <div><span asp-validation-for="Mission" class="text-danger"></span></div>
+        <input asp-for="Mission" class="form-control" />
+    </div>
+
+
+    <div class="form-group">
+        <div class="col-lg-10 col-lg-offset-2">
+            <button type="reset" class="btn btn-default">Reset</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</form>
+<br />
+<div class="container Home">
+    <p><a asp-action="Home">Click here to return home</a>.</p>
+</div>

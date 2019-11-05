@@ -1,0 +1,48 @@
+﻿@model IEnumerable<IUnit>
+
+
+
+
+<jumbotron>
+    @foreach (IUnit m in Model)
+    {
+        @if (m.Origin == "Majcom")
+        {
+            <div class="card text-white bg-secondary mb-3 d-inline-flex" style="max-width: 20rem;">
+                <a asp-route-Name="@m.Name" asp-action="MajcomEntry" class="card-header" font="bold">@m.Name</a>
+            </div>
+        }
+        @if (m.Origin == "NumberedAF")
+        {
+            <div class="card text-white bg-secondary mb-3 d-inline-flex" style="max-width: 20rem;">
+                <a asp-route-Name="@m.Name" asp-action="NumberedAFEntry" class="card-header" font="bold">@m.Name</a>
+            </div>
+
+        }
+        @if (m.Origin == "Wing")
+        {
+            <div class="card text-white bg-secondary mb-3 d-inline-flex" style="max-width: 20rem;">
+                <a asp-route-Name="@m.Name" asp-action="WingEntry" class="card-header" font="bold">@m.Name</a>
+            </div>
+
+        }
+        @if (m.Origin == "Group")
+        {
+            <div class="card text-white bg-secondary mb-3 d-inline-flex" style="max-width: 20rem;">
+                <a asp-route-Name="@m.Name" asp-action="GroupEntry" class="card-header" font="bold">@m.Name</a>
+            </div>
+
+        }
+        @if (m.Origin == "Squadron")
+        {
+            <div class="card text-white bg-secondary mb-3 d-inline-flex" style="max-width: 20rem;">
+                <a asp-route-Name="@m.Name" asp-action="SquadronEntry" class="card-header" font="bold">@m.Name</a>
+            </div>
+
+        }
+
+    }
+</jumbotron>
+
+
+<div >@Model.Count() results</div>

@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Squadron>
+
+<h3 class="bg-secondary p-2 text-white text-center">
+    Squadrons
+</h3>
+<style>
+    .card-header {
+        text-decoration: underline;
+    }
+</style>
+
+@foreach (Squadron m in Model)
+{
+<div class="card text-white bg-secondary mb-3 d-inline-flex" style="max-width: 20rem;">
+    <a asp-route-Name="@m.Name" asp-action="SquadronEntry" class="card-header" font="bold">@m.Name</a>
+    <div class="card-body">
+        @if (m.Motto != "")
+        {<h5 class="card-title">"@m.Motto"</h5>}
+        <h6 class="card-text">@m.Location</h6>
+    </div>
+</div>
+}

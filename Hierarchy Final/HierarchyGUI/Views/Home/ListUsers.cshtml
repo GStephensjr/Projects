@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Credential>
+
+<h3 class="bg-secondary p-2 text-white text-center">
+    Users
+</h3>
+<table class="table table table-hover " border="1">
+    <thead>
+        <tr class="table-dark">
+            <th>User Name</th>
+            <th>Account Status</th>
+            @if (SessionCredentials.Status == true)
+            {<th></th>}
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Credential r in Model)
+        {
+            <tr class="table-dark">
+                <td>@r.UserName</td>
+
+                <td>@(r.Admin == true ? "Admin" : "Basic")</td>
+                <td>
+                    @if (SessionCredentials.Status == true)
+                    {
+                        <a type="button" class="btn btn-warning btn-sm" asp-route-UserName="@r.UserName" asp-action="ModifyUser">Modify</a>
+                        <a type="button" onclick="return confirm('Are you sure you want to delete this item?');" class="btn btn-danger btn-sm"asp-route-UserName="@r.UserName" asp-action="DeleteUser">Delete</a>
+                    }
+                </td>
+        </tr>
+    }
+    </tbody>
+</table>
+<a class="btn btn-secondary" href="Home">click here to return home</a>
+

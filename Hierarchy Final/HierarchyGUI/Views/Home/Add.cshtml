@@ -1,0 +1,36 @@
+﻿<head runat="server">
+    <title>Meta Tags</title>
+    @if (SessionCredentials.Status != true)
+    {
+        @*<meta http-equiv="Refresh" content="0; url=Login" />*@
+    }
+</head>
+<div class="jumbotron">
+    <div class="bs-component align-top text-center">
+        <div class="page-header">
+            <div class="col-lg-12 align-self-center">
+                <h3 id="buttons">What type of entry are we creating?</h3>
+            </div>
+        </div>
+        <div class="list-group">
+            <a href="HeadquartersAFCreate" class="list-group-item list-group-item-action">
+                Headquarters AF
+            </a>
+            <a href="MajcomCreate" class="list-group-item list-group-item-action">
+                Majcom
+            </a>
+            <a href="NumberedAFCreate" class="list-group-item list-group-item-action">
+                Numbered Air Force
+            </a>
+            <a href="WingCreate" class="list-group-item list-group-item-action">
+                Wing
+            </a>
+            <a href="GroupCreate" class="list-group-item list-group-item-action">
+                Group
+            </a>
+            <a href="SquadronCreate" class="list-group-item list-group-item-action">
+                Squadron
+            </a>
+        </div>
+    </div>
+</div>

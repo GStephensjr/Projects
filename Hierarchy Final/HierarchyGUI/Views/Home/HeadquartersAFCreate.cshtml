@@ -1,0 +1,38 @@
+﻿@model HeadquartersAF
+<head runat="server">
+    <title>Meta Tags</title>
+    @if (SessionCredentials.Status != true)
+    {
+        <meta http-equiv="Refresh" content="0; url=Login" />
+    }
+</head>
+
+<form asp-action="HeadquartersAFCreate" method="post" class="m-4">
+    <div class="container">
+        <h1 class="text-center m-4">Headquarters</h1>
+        <p>Please fill out this form to add a new headquarters division</p>
+        <hr class="form-group">
+
+        <label for="StaffName"><b>Staff Name</b></label>
+        <input type="text"  asp-for="StaffName" class="form-control" required>
+
+        <label for="Location"><b>Location</b></label>
+        <input type="text"  asp-for="Location" class="form-control">
+
+        <label for="Commander"><b></b>Division Head</label>
+        <input type="text"  asp-for="Commander" class="form-control">
+
+        <label for="CommanderTitle"><b>Division Head Title</b></label>
+        <input type="text"  asp-for="CommanderTitle" class="form-control">
+
+        <label for="Mission"><b>Mission</b></label>
+        <input type="text"  asp-for="Mission" class="form-control">
+
+
+        <button type="submit" class="btn btn-primary">Add</button>
+    </div>
+</form>
+<br/>
+<div class="container Home">
+    <p><a asp-action="Home">Click here to return home</a>.</p>
+</div>

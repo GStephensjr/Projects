@@ -1,0 +1,198 @@
+﻿<head runat="server">
+    <title>Meta Tags</title>
+    @if (SessionCredentials.User == null)
+    {
+        @*<meta http-equiv="Refresh" content="0; url=Login" />*@
+    }
+</head>
+<style>
+    .bs-component {
+        width: 30%;
+        float: inherit;
+        height:100%;
+        display:inline-block;
+    }
+    .container{
+     text-align: center;
+     width:100%;
+     height:100%;
+     float:left;
+    }
+    .jumbotron {
+        display: inline-block;
+        width:100%;
+        height:auto;
+    }
+
+    .card {
+        float: left;
+    }
+
+    .image {
+        display: inline-block;
+        width:34%;
+        height:100%; 
+    }
+</style>
+
+<br />
+<div class="jumbotron">
+    <img class="image" src="~/lib/Images/BIA.png" />
+
+    <div class="bs-component align-top text-center">
+        <div class="page-header">
+            <div class="col-lg-12 align-self-center">
+                <h3 id="buttons">Categories</h3>
+            </div>
+        </div>
+        <div class="list-group">
+            <a href="HeadquartersAF" class="list-group-item list-group-item-action">
+                Headquarters AF
+            </a>
+            <a href="MajcomListing" class="list-group-item list-group-item-action">
+                Majcom
+            </a>
+            <a href="NumberedAFListing" class="list-group-item list-group-item-action">
+                Numbered Air Force
+            </a>
+            <a href="WingListing" class="list-group-item list-group-item-action">
+                Wing
+            </a>
+            <a href="GroupListing" class="list-group-item list-group-item-action">
+                Group
+            </a>
+            <a href="SquadronListing" class="list-group-item list-group-item-action">
+                Squadron
+            </a>
+            @if (SessionCredentials.Status == true)
+            {
+                <a href="Add" class="list-group-item list-group-item-action">Add a new Entry</a>
+            }
+
+        </div>
+    </div>
+    <img class="image" src="~/lib/Images/BIA2.png" />
+
+</div>
+
+
+@*<div >
+    <div class="bs-component">
+        <div class="page-header">
+            <div class="col-lg-12">
+                <h2 id="buttons">Categories</h2>
+            </div>
+        </div>
+        <div class="list-group col-lg-12">
+            <a href="HeadquartersAF" class="list-group-item list-group-item-action">
+                Headquarters AF
+            </a>
+            <a href="MajcomListing" class="list-group-item list-group-item-action">
+                Majcom
+            </a>
+            <a href="NumberedAFListing" class="list-group-item list-group-item-action">
+                Numbered Air Force
+            </a>
+            <a href="WingListing" class="list-group-item list-group-item-action">
+                Wing
+            </a>
+            <a href="GroupListing" class="list-group-item list-group-item-action">
+                Group
+            </a>
+            <a href="SquadronListing" class="list-group-item list-group-item-action">
+                Squadron
+            </a>
+        </div>
+    </div>
+    <div class="jumbotron">
+        <div class="card text-white bg-secondary mb-3 d-inline-flex" style="max-width: 30rem;">
+            <a asp-route-Name="" asp-action="MajcomEntry" class="card-header" font="bold">name</a>
+            <div class="card-body">
+                <h5 class="card-title">"motto"</h5>
+                <h6 class="card-text">location</h6>
+            </div>
+        </div>
+        <div class="card text-white bg-secondary mb-3 d-inline-flex" style="max-width: 30rem;">
+            <a asp-route-Name="" asp-action="MajcomEntry" class="card-header" font="bold">admin</a>
+            <div class="card-body">
+                <h5 class="card-title">"motto"</h5>
+                <h6 class="card-text">location</h6>
+            </div>
+        </div>
+        <div class="card text-white bg-secondary mb-3 d-inline-flex" style="max-width: 30rem;">
+            <a asp-route-Name="" asp-action="MajcomEntry" class="card-header" font="bold">Name</a>
+            <div class="card-body">
+                <h5 class="card-title">"motto"</h5>
+                <h6 class="card-text">location</h6>
+            </div>
+        </div>
+        <div class="card text-white bg-secondary mb-3 d-inline-flex" style="max-width: 30rem;">
+            <a asp-route-Name="" asp-action="MajcomEntry" class="card-header" font="bold">Name</a>
+            <div class="card-body">
+                <h5 class="card-title">"Motto"</h5>
+                <h6 class="card-text">Location</h6>
+            </div>
+        </div>
+
+    </div>
+
+
+    </div>*@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<div class="row">
+        <div class="bs-docs-section col-12">
+            <div class="bs-component">
+                <div class="page-header">
+                    <div class="col-lg-12">
+                        <h2 id="buttons">Categories</h2>
+                    </div>
+                </div>
+                <div class="list-group col-lg-12">
+                    <a href="HeadquartersAF" class="list-group-item list-group-item-action">
+                        Headquarters AF
+                    </a>
+                    <a href="MajcomListing" class="list-group-item list-group-item-action">
+                        Majcom
+                    </a>
+                    <a href="NumberedAFListing" class="list-group-item list-group-item-action">
+                        Numbered Air Force
+                    </a>
+                    <a href="WingListing" class="list-group-item list-group-item-action">
+                        Wing
+                    </a>
+                    <a href="GroupListing" class="list-group-item list-group-item-action">
+                        Group
+                    </a>
+                    <a href="SquadronListing" class="list-group-item list-group-item-action">
+                        Squadron
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid col-lg-12" align="right">
+            <div class="row">
+                <div class="card border-primary mb-3" style="max-width: 20rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">
+                        <h4 class="card-title">Primary card title</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>*@
+

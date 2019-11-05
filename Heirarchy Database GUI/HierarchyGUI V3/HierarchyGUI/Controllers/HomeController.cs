@@ -6,6 +6,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using HierarchyGUI.Models.Database_Models;
+
 
 namespace HierarchyGUI.Controllers
 {
@@ -13,6 +15,7 @@ namespace HierarchyGUI.Controllers
     {
         private ICredentialsRepository repository;
         private IRepository context;
+        private string Name;
         public HomeController(ICredentialsRepository repo, IRepository ctx)
         {
             repository = repo;
@@ -322,6 +325,49 @@ namespace HierarchyGUI.Controllers
         public IActionResult WingEntry(string Name) => View(context.Wings.FirstOrDefault(p => p.Name == Name));
         public IActionResult SquadronEntry(string Name) => View(context.Squadrons.FirstOrDefault(p => p.Name == Name));
 
+
+        public IActionResult Search(string? query)
+        {
+            //////////////////////////////////
+            //Query.Results.Add("HeadquartersAF",
+            //    //Name = context.HeadquartersAF.Where(p => p.StaffName.Contains(query) || p.Commander.Contains(query) || p.CommanderTitle.Contains(query) || p.Location.Contains(query) || p.Mission.Contains(query)).Select(p => p.StaffName)
+            //    context.HeadquartersAF.FirstOrDefault(p=>p.StaffName.Contains(query)).ToString()
+
+            //);
+            //Query.Results.Add(
+            //    "Majcom",
+            //    context.Majcoms.FirstOrDefault(p => p.Name.Contains(query)).Name
+
+            //    //Name = context.Majcoms.Where(p => p.Name.Contains(query) || p.Commander.Contains(query) || p.Location.Contains(query) || p.Motto.Contains(query) || p.Mission.Contains(query) || p.Size.ToString().Contains(query)).Select(p=>p.Name)
+            //);
+            //Results.Add(new IUnit {
+            //    Origin = "NumberedAF",
+            //    Name = context.NumberedAFs.Where(p => p.Name.Contains(query) || p.Commander.Contains(query) || p.Location.Contains(query) || p.Majcom.Contains(query) || p.Motto.Contains(query) || p.Mission.Contains(query) || p.Size.ToString().Contains(query)) });
+            //Results.Add(new IUnit
+            //{
+            //    Origin = "Wing",
+            //    Name = context.Wings.Where(p => p.Name.Contains(query) || p.Commander.Contains(query) || p.Location.Contains(query) || p.Motto.Contains(query) || p.Mission.Contains(query) || p.Majcom.Contains(query) || p.Size.ToString().Contains(query)).Select(p=>p.Name)
+            //});
+
+            //Results.Add(new IUnit
+            //{
+            //    Origin = "Group",
+            //    Name = context.Groups.Where(p => p.Name.Contains(query) || p.Commander.Contains(query) || p.Location.Contains(query) || p.Motto.Contains(query) || p.Mission.Contains(query) || p.Size.ToString().Contains(query)).Select(p=>p.Name)
+            //});
+
+            //Results.Add(new IUnit
+            //{
+            //    Origin = "Squadron",
+            //    Name = context.Squadrons.Where(p => p.Name.Contains(query) || p.Commander.Contains(query) || p.Location.Contains(query) || p.Motto.Contains(query) || p.Mission.Contains(query) || p.Size.ToString().Contains(query)).Select(p=>p.Name)
+            //});
+            //SearchViewModel Query = new SearchViewModel(query, context);
+            //ViewData["Query"] = Results;
+
+            Name = context.Majcoms.FirstOrDefault(p => p.Name.Contains(query)).Name;
+            //Dictionary<string, string> Results = new Dictionary<string, string>() { { "Majcom", context.Majcoms.FirstOrDefault(p => p.Name.Contains(query)).Name } };
+            return View(new Dictionary<string, string>() { { "Majcom", Name } });
+        }
+        
 
 
         public ActionResult WelcomePage()
