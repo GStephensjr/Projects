@@ -4,6 +4,6 @@
     {
         public static string User { get; set; } 
         
-        public static bool Status { get; set; } = true;
+        public static bool Status { get; set; }
     }
 }

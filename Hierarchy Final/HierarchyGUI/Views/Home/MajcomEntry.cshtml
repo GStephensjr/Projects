@@ -1,22 +1,22 @@
 ﻿<style>
-.card{
-    width:25%; 
-    float: none;
-    justify-content: center;
-    justify-self: center;
-    align-self: center;
-    
-}
+    .card {
+        width: 25%;
+        float: none;
+        justify-content: center;
+        justify-self: center;
+        align-self: center;
+    }
 </style>
 
-
+@{string i = $"{Model.Name} Insignia.png";}
+@i
 <div class="card">
     <h3 class="card-header"> @Model.Name </h3>
     <div class="card-body">
         <h5 class="card-title"> @Model.Location </h5>
         <h6 class="card-subtitle text-muted"> @Model.Motto </h6>
     </div>
-    <img style="height: 200px; width: 200px; display: block;" src="~/lib/Images/Insignias/Majcom Insignias/@Model.Name Insignia.png">
+    <img style="height: 200px; width: 200px; display: block;" src="~/lib/Images/Insignias/Majcom Insignias/@i.*">
     <div class="card-body">
         <p class="card-text"> @Model.Mission </p>
     </div>

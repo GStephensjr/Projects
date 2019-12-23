@@ -1,0 +1,6 @@
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Independent Projects\Math Games Exercise\bin\Debug\Math Games Exercise.exe.config
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Independent Projects\Math Games Exercise\bin\Debug\Math Games Exercise.exe
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Independent Projects\Math Games Exercise\bin\Debug\Math Games Exercise.pdb
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Independent Projects\Math Games Exercise\obj\Debug\Math Games Exercise.csprojAssemblyReference.cache
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Independent Projects\Math Games Exercise\obj\Debug\Math Games Exercise.exe
+C:\Users\Grego\OneDrive\Desktop\MSSA\Projects\Independent Projects\Math Games Exercise\obj\Debug\Math Games Exercise.pdb
